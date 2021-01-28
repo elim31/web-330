@@ -1,0 +1,48 @@
+<!--
+============================================
+; Title: Exercise 4.2
+; Author: Richard Krasso
+; Date: 26 Jan 2021
+; Modified By: Eunice Lim
+; Description: Exercise 4.2 HTTP GET and POST Operations
+;===========================================
+*/ 
+// header goes here
+
+const header = require("../lim-header.js");
+
+console.log(header.display("Eunice", "Lim", "Exercise 4.2") + "\n");
+
+// start program-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment name</title>
+
+    <!-- jQuery reference -->
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/5DACB2B0-5003-6543-8B39-D8EE6E4FC44C/main.js"
+      charset="UTF-8"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h4>HTTP GET Request</h4>
+    <button id="button1">Get Random Breed</button> <!--Add an HTML button, assign it an ID, and give it a description-->
+    <script>
+      $(function(){
+
+           $("#button1").click(function(){  //Register an onClick event 
+
+            $.get('https://dog.ceo/api/breeds/image/random', function(data,status){   //create an inline GET request to: https://dog.ceo/api/breeds/image/random
+              console.log('Data: ' + JSON.stringify(data) + '\nStatus: ' + status)   //Using the console.log() function, output the results
+            })
+      });
+      });
+        </script>
+  </body>
+</html>

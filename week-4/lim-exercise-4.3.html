@@ -1,0 +1,57 @@
+<!--
+============================================
+; Title: Exercise 4.3
+; Author: Richard Krasso
+; Date: 28 Jan 2021
+; Modified By: Eunice Lim
+; Description: Exercise 4.3 HTTP PUT and DELETE Operations
+;===========================================
+*/ 
+// header goes here
+
+const header = require("../lim-header.js");
+
+console.log(header.display("Eunice", "Lim", "Exercise 4.3") + "\n");
+
+// start program-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment name</title>
+
+    <!-- jQuery reference -->
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/5DACB2B0-5003-6543-8B39-D8EE6E4FC44C/main.js"
+      charset="UTF-8"
+    ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+
+    <h4>HTTP DELETE Request</h4>
+    <button id="delbutton">HTTP DELETE Request</button> <!--Add an HTML button, assign it an ID, and give it a description-->
+
+    <script>
+        $(function (){ 
+            $("#delbutton").click(function() {   //Register an onClick event
+                $.ajax({
+                    url:"http://httpbin.org/delete",   //create an object literal DELETE request to http://httpbin.org/delete
+                    dataType: "json",                       //Create a data object with at least 3 fields and assign it to the DELETE request
+                    type: "DELETE",
+                    data:{username:"eulim", password:"PasSword1", email: "eulim@mail.com"},
+                    success: function(data,status){
+                        //Using the console.log() function, output the results
+                        console.log("Username: " + data.form.username + "\nPassword: " + data.form.password + "\nEmail: " + data.form.email + "\nStatus: " + status);
+                    }
+                })
+            });
+        });
+                
+        </script>
+
+  </body>
+</html>
