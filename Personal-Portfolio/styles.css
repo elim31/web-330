@@ -1,0 +1,72 @@
+body{
+    background-color: rgba(31, 89, 143, 0.288)
+}
+#contact{
+    float: right;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+#eunice{
+    float: left;
+    font-family: 'Shadows Into Light Two', cursive;
+    
+}
+
+.intro{
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Merienda', cursive;  
+    font-size: large;
+        }
+
+.portfolio{
+    
+    text-align: center;
+    font-family: 'Merienda', cursive;  
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    
+}
+    
+#port{
+    text-align: center;
+    color: rgba(31, 89, 143);
+    font-family: 'Marck Script', cursive;  
+    
+}
+
+#abtme{
+    color: rgba(31, 89, 143);
+    font-family: 'Marck Script', cursive; 
+    text-align: center; 
+}
+#myimage{
+    border-radius: 8px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.contact_section{
+    font-family: 'Merienda', cursive;  
+}
+
+img{
+    width:150px;
+    height: auto;
+    border-radius: 8px;
+    display: flex;
+}
+.portfolio::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.column{
+    float: left;
+    width: auto;
+  padding: 5px;
+}
