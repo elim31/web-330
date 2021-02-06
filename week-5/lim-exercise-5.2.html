@@ -1,0 +1,65 @@
+<!--
+============================================
+; Title: Exercise 5.2
+; Author: Richard Krasso
+; Date: 2 February 2021
+; Modified By: Eunice Lim
+; Description: Exercise 5.2 The Proxy Pattern
+;===========================================
+*/-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <meta charset="UTF-8" />
+    <title>Exercise 5.2 - The Proxy Pattern</title>
+
+    <!-- jquery Reference Library -->
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/5DACB2B0-5003-6543-8B39-D8EE6E4FC44C/main.js"
+      charset="UTF-8"
+    ></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+      <nav class="navbar navbar-light" style="background-color: #69b0e2;">
+      <a href="#" class="navbar-brand">Home</a>
+    </nav>
+
+        <br /><br />
+      <div id="container">
+          <div class="row">
+              <div class="col-md-12"> 
+                <h2>Exercise 5.2 - Proxy Example #1</h2>
+                <button class="btn btn-primary" id="btnExample1">Run proxy test</button>
+
+                <br />
+                <span id="proxyExampleOne"></span>
+              </div>
+          </div>
+          
+         
+      </div>
+    <script>
+      $(function() {
+          var car ={
+            make: "Tesla",
+            model: "X",
+            display: function(){
+                //clear the span tag 
+                $("#proxyExampleOne").html("");
+
+                $("#proxyExampleOne").append("<br />Make: " + this.make + "<br />" + "Model: " + this.model);
+                
+            }
+          };
+
+        $("#btnExample1").click($.proxy(car, "display"));
+
+      });
+    </script>
+  </body>
+</html>
